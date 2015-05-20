@@ -1,0 +1,21 @@
+{
+  "name": "Yearography",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yearography/core.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yearography/core/issues"
+  },
+  "dependencies": {
+    "express": "~4.12.4"
+  }
+}
