@@ -1,7 +1,7 @@
 {
   "name": "Yearography",
   "version": "0.0.1",
-  "description": "",
+  "description": "meow meow",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +16,7 @@
     "url": "https://github.com/yearography/core/issues"
   },
   "dependencies": {
-    "express": "~4.12.4"
+    "express": "~4.12.4",
+    "jade": "^1.9.2"
   }
 }
