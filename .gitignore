@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #################
 ## Eclipse
 #################
@@ -217,3 +218,10 @@ pip-log.txt
 
 #Node
 node_modules/
+=======
+# node modules
+node_modules
+
+# bower modules
+public/vendor
+>>>>>>> 4676fc49001c6eef0bdb9e47e19926f9a616cf01

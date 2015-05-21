@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "bower": "^1.4.1",
+<<<<<<< HEAD
     "express": "~4.12.4"
   },
   "devDependencies": {
@@ -30,5 +31,9 @@
   },
   "scripts": {
     "postinstall" : "node_modules/.bin/bower install"
+=======
+    "express": "~4.12.4",
+    "jade": "^1.9.2"
+>>>>>>> 4676fc49001c6eef0bdb9e47e19926f9a616cf01
   }
 }
