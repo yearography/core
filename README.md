@@ -1,2 +1,2 @@
-# A project with no name
-MEAN 
+# Yearography - A Great Site for Great People 
+MEAN STACK
