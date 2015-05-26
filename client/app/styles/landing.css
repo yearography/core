@@ -1,7 +1,28 @@
 .footer {
   border-top: 0; }
 
-body {
-  color: black; }
+.landing-bg {
+  position: fixed;
+  background: url("../images/mountain_noblur.jpg");
+  background-size: cover;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.landing-wrapper {
+  color: white;
+  width: 440px;
+  margin: 50px auto; }
+  .landing-wrapper .logo {
+    width: 445px;
+    display: block;
+    margin: 0 auto; }
+  .landing-wrapper .signin-box {
+    width: 100%;
+    height: 300px;
+    border: 1px solid white;
+    margin-top: 2px;
+    border-radius: 5px; }
 
 /*# sourceMappingURL=landing.css.map */
