@@ -4,6 +4,9 @@ node_modules
 # bower modules
 public/vendor
 
-# grunt 
+# grunt
 .grunt
 .sass-cache
+
+#static files 
+web/build
