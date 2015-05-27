@@ -1,9 +1,21 @@
 <div class="landing-bg">
 	<div class="landing-wrapper">
-	<img src="../images/logo1.png" class="logo">
+		<img src="../images/logo1.png" class="logo">
 		<div class="signin-box">
-			<p>This is where the sign in stuff will sit eh?</p>
+			<form id="signinForm">
+			    <div class="form-group col-xs-6 col-md-6">
+			        <label for="email" class="control-label">email</label>
+			        <input type="email" value='' id="email" class="form-control">
+			    </div>
+			    <div class="form-group col-xs-6 col-md-6">
+			        <label for="password" class="control-label">password</label>
+			        <input type="password" value='' id="password" class="form-control">
+			    </div>
+			    <div class="form-group col-xs-4 col-md-4 col-md-offset-8 col-xs-offset-8">
+			    	<button type="submit" class="btn btn-block btn-default">sign in</button>
+			    </div>
+			</form>
 		</div>
-		<em>Notice that there is no footer on this path. The <strong>landing</strong> state is not nested beneath the <strong>app</strong> state.</em>
+		
 	</div>
 </div>
