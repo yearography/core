@@ -32,6 +32,15 @@ angular.module('clientApp').config(function($urlRouterProvider, $stateProvider) 
 				}
 			}
 		})
+		.state('app.register', {
+			url: '/register',
+			views: {
+				'content@': {
+					templateUrl: '/views/register.html',
+					controller: 'RegisterCtrl'
+				}
+			}
+		})
 		// the landing page is not attached to the app state and therefore lives on the same level
 		// if a view is omitted it will not inherit, it simply won't appear
 		.state('landing', {

@@ -1,6 +1,10 @@
 // api app
 var express = require('express'),
-	bodyParser = require('body-parser');
+	bodyParser = require('body-parser'),
+	mongoose = require('mongoose');
+
+var User = require('./models/user.js');
+var jwt = require('./services/jwt.js');
 
 var app = express();
 
@@ -13,6 +17,28 @@ var router = express.Router();
 
 // build routers for each pathway if enough functionality exists
 // app.use routers applying the router to the path route in the app.use call
+router.route('/register')
+	.post(function(req, res) {
+
+		var user = req.body;
+		var newUser = new User.model({
+			email: user.email,
+			password: user.password
+		});
+
+		var payload = {
+			iss: req.hostname,
+			sub: user._id
+		};
+
+		var token = jwt.encode(payload, 'secret..shhh....');
+
+		newUser.save(function(err) {
+			res.status(200).send({ user: newUser.toJSON(), token: token });
+		});
+	});
+
+
 router.route('/users')
 	.get(function(req, res) {
 		var response = [
@@ -38,13 +64,18 @@ router.route('/photos')
 		res.send(photo);
 	});
 
+app.use(function(req, res, next) {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+	res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+	next();
+});
+
 app.use('/api', router);
 
-
-app.get('/', function(req, res) {
-	res.send('API test');
-});
+mongoose.connect('mongodb://localhost/yearography');
 
 app.listen(port, function() {
 	console.log("API Server started on port " + port + "...");
 });
+
